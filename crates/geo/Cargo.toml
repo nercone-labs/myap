@@ -1,0 +1,11 @@
+[package]
+name = "geo"
+description = "Geometry on the Earth: coordinates, distances, bearings, bounds, lines along a route, encoded polylines and Web Mercator tiles"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+serde.workspace = true

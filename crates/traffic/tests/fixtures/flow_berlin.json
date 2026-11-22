@@ -1,0 +1,100 @@
+{
+  "sourceUpdated": "2021-07-01T13:53:03Z",
+  "results": [
+    {
+      "location": {
+        "description": "Kommandantenstraße",
+        "length": 254.0,
+        "shape": {
+          "links": [
+            { "points": [ { "lat": 52.50708997249603, "lng": 13.398289997130632 }, { "lat": 52.506989976391196, "lng": 13.39867003262043 } ], "length": 28.0, "functionalClass": 3 },
+            { "points": [ { "lat": 52.506989976391196, "lng": 13.39867003262043 }, { "lat": 52.506729969754815, "lng": 13.399609979242086 } ], "length": 70.0, "functionalClass": 3 },
+            { "points": [ { "lat": 52.506729969754815, "lng": 13.399609979242086 }, { "lat": 52.50655001029372, "lng": 13.40023996308446 } ], "length": 47.0, "functionalClass": 3 },
+            { "points": [ { "lat": 52.50655001029372, "lng": 13.40023996308446 }, { "lat": 52.506150025874376, "lng": 13.401690032333136 } ], "length": 109.0, "functionalClass": 3 }
+          ]
+        }
+      },
+      "currentFlow": {
+        "speed": 3.6111112,
+        "speedUncapped": 3.6111112,
+        "freeFlow": 10.555556,
+        "jamFactor": 8.2,
+        "confidence": 0.99,
+        "traversability": "open",
+        "subSegments": [
+          { "length": 100.0, "speed": 7.2222223, "speedUncapped": 7.2222223, "freeFlow": 11.111112, "jamFactor": 3.2, "jamTendency": 1, "confidence": 0.99, "traversability": "open" },
+          { "length": 154.0, "speed": 2.777778, "speedUncapped": 2.777778, "freeFlow": 10.277778, "jamFactor": 8.7, "jamTendency": 1, "confidence": 0.99, "traversability": "open" }
+        ]
+      }
+    },
+    {
+      "location": {
+        "length": 659.0,
+        "shape": {
+          "links": [
+            { "points": [ { "lat": 52.501569986343384, "lng": 13.702660035341978 }, { "lat": 52.50179001130164, "lng": 13.702860027551651 }, { "lat": 52.501959996297956, "lng": 13.703020038083196 } ], "length": 50.0, "functionalClass": 3 },
+            { "points": [ { "lat": 52.501959996297956, "lng": 13.703020038083196 }, { "lat": 52.502879993990064, "lng": 13.703829981386662 } ], "length": 116.0, "functionalClass": 3 },
+            { "points": [ { "lat": 52.502879993990064, "lng": 13.703829981386662 }, { "lat": 52.50310001894832, "lng": 13.704029973596334 }, { "lat": 52.504169968888164, "lng": 13.704979978501797 } ], "length": 163.0, "functionalClass": 3 },
+            { "points": [ { "lat": 52.504169968888164, "lng": 13.704979978501797 }, { "lat": 52.504879999905825, "lng": 13.70560996234417 }, { "lat": 52.50540001317859, "lng": 13.706069961190224 }, { "lat": 52.505700001493096, "lng": 13.70631999336183 }, { "lat": 52.50596000812948, "lng": 13.706470029428601 }, { "lat": 52.50616000033915, "lng": 13.706549992784858 }, { "lat": 52.50644003972411, "lng": 13.706600032746792 }, { "lat": 52.50668001361191, "lng": 13.706589974462986 }, { "lat": 52.50691001303494, "lng": 13.706559967249632 } ], "length": 330.0, "functionalClass": 3 }
+          ]
+        }
+      },
+      "currentFlow": {
+        "speed": 0.0,
+        "speedUncapped": 0.0,
+        "freeFlow": 13.888889,
+        "jamFactor": 10.0,
+        "confidence": 0.99,
+        "traversability": "closed",
+        "junctionTraversability": "allClosed"
+      }
+    },
+    {
+      "location": {
+        "length": 150.0,
+        "shape": {
+          "links": [
+            { "points": [ { "lat": 52.53, "lng": 13.40 }, { "lat": 52.531, "lng": 13.401 } ], "length": 100.0, "functionalClass": 2 },
+            { "points": [ { "lat": 52.532, "lng": 13.402 }, { "lat": 52.5325, "lng": 13.4025 } ] }
+          ]
+        }
+      },
+      "currentFlow": {
+        "freeFlow": 13.888889,
+        "jamFactor": 1.2
+      }
+    },
+    {
+      "location": {
+        "length": 80.0,
+        "shape": {
+          "links": [
+            { "points": [ { "lat": 52.54, "lng": 13.41 }, { "lat": 52.5405, "lng": 13.4105 } ], "length": 80.0, "functionalClass": 1 }
+          ]
+        }
+      },
+      "currentFlow": {
+        "speed": 25.0,
+        "freeFlow": 25.0,
+        "jamFactor": 0.0,
+        "confidence": 0.5,
+        "traversability": "reversibleNotRoutable"
+      }
+    },
+    {
+      "location": {
+        "description": "Alt-Friedrichsfelde",
+        "length": 966.0,
+        "olr": "CCoBEAAmJQmadyVXRQAJBQQBAkcACgUEAYpTAAfI/7QACQUEAQK3ADAAgxM="
+      },
+      "currentFlow": {
+        "speed": 13.888889,
+        "speedUncapped": 14.722222,
+        "freeFlow": 13.888889,
+        "jamFactor": 1.2,
+        "confidence": 0.99,
+        "traversability": "open"
+      }
+    }
+  ]
+}

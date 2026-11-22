@@ -1,0 +1,29 @@
+[package]
+name = "myap-router"
+description = "Myap Router: an offline router on OpenStreetMap data, for cars, bicycles and walking, with turn restrictions, avoidances, alternatives and turn-by-turn guidance"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+geo.workspace = true
+osm.workspace = true
+routing.workspace = true
+
+[dependencies.lexopt]
+workspace = true
+optional = true
+
+[features]
+# The command-line tool `myap-router` (building graphs and routing on them).
+cli = ["dep:lexopt"]
+
+[[bin]]
+name = "myap-router"
+path = "src/bin/myap-router.rs"
+required-features = ["cli"]
+
+[dev-dependencies]
+osm.workspace = true

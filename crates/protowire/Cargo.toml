@@ -1,0 +1,10 @@
+[package]
+name = "protowire"
+description = "A reader of the Protocol Buffers wire format, without schemas or generated code"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]

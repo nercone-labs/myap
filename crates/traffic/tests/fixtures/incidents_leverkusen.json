@@ -1,0 +1,65 @@
+{
+  "sourceUpdated": "2021-07-06T10:22:01Z",
+  "results": [
+    {
+      "location": {
+        "length": 9310.0,
+        "shape": {
+          "links": [
+            { "points": [ { "lat": 51.0301, "lng": 6.9801 }, { "lat": 51.0311, "lng": 6.9811 } ], "length": 130.0, "functionalClass": 1 },
+            { "points": [ { "lat": 51.0311, "lng": 6.9811 }, { "lat": 51.0321, "lng": 6.9821 } ], "length": 130.0, "functionalClass": 1 },
+            { "points": [ { "lat": 51.0401, "lng": 6.9901 }, { "lat": 51.0411, "lng": 6.9911 } ], "length": 130.0, "functionalClass": 1 }
+          ]
+        }
+      },
+      "incidentDetails": {
+        "id": "3195531507295233286",
+        "originalId": "3195531507295233286",
+        "startTime": "2019-12-03T23:00:00Z",
+        "endTime": "2023-03-12T22:59:59Z",
+        "entryTime": "2021-07-04T02:18:03Z",
+        "roadClosed": true,
+        "criticality": "minor",
+        "type": "other",
+        "typeDescription": { "value": "Sonstige Neuigkeiten", "language": "de-DE" },
+        "codes": [ 803, 1851 ],
+        "description": { "value": "Bei Leverkusen - Vorübergehende Begrenzung der Breite 7.0 m. Bauarbeiten auf Abschnitt." },
+        "summary": { "value": "Bei Leverkusen - Vorübergehende Begrenzung der Breite 7.0 m. Bauarbeiten auf Abschnitt." },
+        "vehicleRestrictions": [ { "vehicleType": "motorVehicle", "restrictionType": { "size": { "dimension": "width", "value": { "greaterThan": 0.0 } } } } ]
+      }
+    },
+    {
+      "location": {
+        "length": 2087.0,
+        "shape": {
+          "links": [
+            { "points": [ { "lat": 51.05, "lng": 6.95 }, { "lat": 51.06, "lng": 6.96 } ], "length": 2087.0, "functionalClass": 1 }
+          ]
+        }
+      },
+      "incidentDetails": {
+        "id": "3848418285967206032",
+        "originalId": "2349753562597427858",
+        "startTime": "2019-10-12T07:20:00.00Z",
+        "endTime": "not a time",
+        "roadClosed": true,
+        "criticality": "critical",
+        "type": "roadClosure",
+        "summary": { "value": "Closed due to roadwork.", "language": "en-US" }
+      }
+    },
+    {
+      "location": { "length": 120.0 },
+      "incidentDetails": {
+        "id": "42",
+        "originalId": "42",
+        "roadClosed": false,
+        "criticality": "low",
+        "type": "volcanicEruption"
+      }
+    },
+    {
+      "location": { "length": 1.0 }
+    }
+  ]
+}

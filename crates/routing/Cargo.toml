@@ -1,0 +1,15 @@
+[package]
+name = "routing"
+description = "The model of routes shared by every router: requests, routes, legs, steps and maneuvers"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+geo.workspace = true
+fetch.workspace = true
+serde.workspace = true
+[dev-dependencies]
+serde_json.workspace = true

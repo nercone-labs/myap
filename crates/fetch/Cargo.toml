@@ -1,0 +1,11 @@
+[package]
+name = "fetch"
+description = "HTTP requests and responses as values, for code that decides what to fetch but leaves the fetching to its host"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+serde.workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "osm"
+description = "OpenStreetMap data: nodes, ways and relations, read from PBF files and from the JSON of the Overpass API"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+geo.workspace = true
+fetch.workspace = true
+protowire.workspace = true
+miniz_oxide.workspace = true
+serde.workspace = true
+serde_json.workspace = true

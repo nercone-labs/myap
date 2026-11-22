@@ -1,0 +1,14 @@
+[package]
+name = "geocoding"
+description = "Places and their search: the model of a place, and clients of the Photon and Nominatim geocoders of OpenStreetMap data"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+geo.workspace = true
+fetch.workspace = true
+serde.workspace = true
+serde_json.workspace = true

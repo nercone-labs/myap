@@ -1,0 +1,42 @@
+[versions]
+agp = "9.5.2"
+kotlin = "2.4.21"
+# Compose 1.12. The next BOM (2026.11.01, Compose 1.13) needs compileSdk 37.1.
+compose-bom = "2026.09.00"
+# Material 3 Expressive components (ButtonGroup, LoadingIndicator, SegmentedListItem, ...) are
+# newer than this BOM; 1.5.0 is their first stable release, and needs Compose 1.12.
+material3 = "1.5.0"
+activity = "1.13.0"
+lifecycle = "2.11.1"
+core = "1.19.1"
+serialization = "1.13.0"
+# The HTTP client of the host (MapLibre brings OkHttp too; this version is used by both).
+okhttp = "5.5.1"
+# The map: MapLibre Native, the OpenGL ES build (the default build draws with Vulkan, which old
+# devices lack). No Google Play services.
+maplibre = "13.7.1"
+# Android Auto: the Car App Library of AndroidX (templates and the map's surface). It needs no
+# Google Play services in the application; Android Auto itself is the host.
+car-app = "1.7.0"
+junit = "4.13.2"
+
+[libraries]
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "core" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-material-icons = { module = "androidx.compose.material:material-icons-extended" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+maplibre = { module = "org.maplibre.gl:android-sdk-opengl", version.ref = "maplibre" }
+car-app = { module = "androidx.car.app:app", version.ref = "car-app" }
+junit = { module = "junit:junit", version.ref = "junit" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

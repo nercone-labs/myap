@@ -1,0 +1,17 @@
+[package]
+name = "elevation"
+description = "Elevations from terrain tiles (Terrarium of AWS Open Data, the elevation tiles of GSI Japan): tiles covering an area, decoding and sampling"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+geo.workspace = true
+png.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+miniz_oxide.workspace = true
+serde_json.workspace = true

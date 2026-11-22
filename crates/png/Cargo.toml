@@ -1,0 +1,11 @@
+[package]
+name = "png"
+description = "A decoder of PNG images (W3C PNG specification): every colour type and bit depth, interlaced or not, with checked sizes"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+miniz_oxide.workspace = true

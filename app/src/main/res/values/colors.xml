@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The background of the Myap icon (website/public/static/assets/images/projects/labs/myap/icon.svg of nercone-dev). -->
+    <color name="ic_launcher_background">#FF26BF80</color>
+</resources>

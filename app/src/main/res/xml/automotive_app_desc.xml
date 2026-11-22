@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android Auto: Myap is an application of templates (the Car App Library), of the navigation kind. -->
+<automotiveApp>
+    <uses name="template" />
+</automotiveApp>

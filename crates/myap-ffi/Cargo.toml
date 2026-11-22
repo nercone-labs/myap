@@ -1,0 +1,17 @@
+[package]
+name = "myap-ffi"
+description = "The C interface of the Myap core, and its Java Native Interface for Android and desktop JVMs"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[lib]
+name = "myap_ffi"
+crate-type = ["cdylib", "staticlib", "rlib"]
+
+[dependencies]
+myap.workspace = true
+# The Java Native Interface is not only Android's: a desktop JVM loads the same library.
+jni-sys.workspace = true

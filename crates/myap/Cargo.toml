@@ -1,0 +1,27 @@
+[package]
+name = "myap"
+description = "The core of Myap: search, routing on every router, navigation, offline regions, map styles and the control of what is shared with Google"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+geo.workspace = true
+elevation.workspace = true
+traffic.workspace = true
+fetch.workspace = true
+osm.workspace = true
+routing.workspace = true
+geocoding.workspace = true
+osrm.workspace = true
+valhalla.workspace = true
+google.workspace = true
+myap-router.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+miniz_oxide.workspace = true
+serde_json.workspace = true

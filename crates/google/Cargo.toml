@@ -1,0 +1,16 @@
+[package]
+name = "google"
+description = "A client of the keyless web endpoints of Google Maps: suggestions, search, directions and map tiles"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+geo.workspace = true
+fetch.workspace = true
+routing.workspace = true
+geocoding.workspace = true
+serde.workspace = true
+serde_json.workspace = true

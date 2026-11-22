@@ -1,0 +1,14 @@
+[package]
+name = "traffic"
+description = "Live traffic as values: the speed of roads and the incidents on them, and the client of HERE Traffic API v7"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+geo.workspace = true
+fetch.workspace = true
+serde.workspace = true
+serde_json.workspace = true

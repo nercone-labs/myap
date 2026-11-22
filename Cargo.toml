@@ -1,0 +1,56 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/geo",
+    "crates/fetch",
+    "crates/protowire",
+    "crates/png",
+    "crates/elevation",
+    "crates/traffic",
+    "crates/osm",
+    "crates/routing",
+    "crates/osrm",
+    "crates/valhalla",
+    "crates/geocoding",
+    "crates/google",
+    "crates/myap-router",
+    "crates/myap",
+    "crates/myap-ffi",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["nercone <nercone@nercone.dev>"]
+repository = "https://github.com/nercone-labs/myap"
+license = "MIT"
+
+[workspace.dependencies]
+geo = { path = "crates/geo" }
+fetch = { path = "crates/fetch" }
+protowire = { path = "crates/protowire" }
+png = { path = "crates/png" }
+elevation = { path = "crates/elevation" }
+traffic = { path = "crates/traffic" }
+osm = { path = "crates/osm" }
+routing = { path = "crates/routing" }
+geocoding = { path = "crates/geocoding" }
+osrm = { path = "crates/osrm" }
+valhalla = { path = "crates/valhalla" }
+google = { path = "crates/google" }
+myap-router = { path = "crates/myap-router" }
+myap = { path = "crates/myap" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# zlib (the compression of OpenStreetMap PBF blobs), in pure Rust.
+miniz_oxide = "0.8"
+jni-sys = "0.4"
+lexopt = "0.3"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+# Not `abort`: the C interface catches a panic of the core and answers with an error, so that a
+# bug in one request never ends the application in the middle of a navigation.
+strip = true

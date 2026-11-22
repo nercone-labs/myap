@@ -1,0 +1,15 @@
+[package]
+name = "osrm"
+description = "A client of the route service of OSRM (the Open Source Routing Machine): its requests and its responses as routes"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+geo.workspace = true
+fetch.workspace = true
+routing.workspace = true
+serde.workspace = true
+serde_json.workspace = true
