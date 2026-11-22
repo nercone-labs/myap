@@ -618,7 +618,14 @@ impl Core {
     }
 
     fn search_request(&self, query: &str, limit: u32) -> SearchRequest {
-        SearchRequest { query: query.into(), near: Some(self.near()), bounds: self.viewport.map(|v| v.1), bounded: false, language: self.book().tag().into(), limit }
+        SearchRequest {
+            query: query.into(),
+            near: Some(self.near()),
+            bounds: self.viewport.map(|v| v.1),
+            bounded: false,
+            language: self.book().tag().into(),
+            limit,
+        }
     }
 
     fn note_google_error(&mut self, error: &GoogleError) {

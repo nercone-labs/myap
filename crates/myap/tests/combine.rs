@@ -72,7 +72,9 @@ fn lookup(id: &str, tags: &str) -> String {
         "W" => "way",
         _ => "relation",
     };
-    format!(r#"[{{"osm_type":"{kind}","osm_id":{number},"lat":"35.6825","lon":"139.7716","category":"amenity","type":"restaurant","name":"x","address":{{}},"extratags":{tags}}}]"#)
+    format!(
+        r#"[{{"osm_type":"{kind}","osm_id":{number},"lat":"35.6825","lon":"139.7716","category":"amenity","type":"restaurant","name":"x","address":{{}},"extratags":{tags}}}]"#
+    )
 }
 
 const RAMEN: &str = include_str!("../../google/tests/fixtures/search_ramen.txt");
@@ -169,7 +171,8 @@ fn a_place_of_openstreetmap_is_filled_from_google() {
     let (details, _) = open_session(&mut core, T0 + 2, page).into_iter().next().unwrap();
     let snapshot = r.snapshot.unwrap();
     // What is sent is recorded (besides the opening of the session).
-    let sent: Vec<&GoogleRecord> = snapshot.google.records.iter().filter(|r| r.purpose == GoogleUse::PlaceDetails && !r.sent.starts_with("Google Maps")).collect();
+    let sent: Vec<&GoogleRecord> =
+        snapshot.google.records.iter().filter(|r| r.purpose == GoogleUse::PlaceDetails && !r.sent.starts_with("Google Maps")).collect();
     assert_eq!(sent.len(), 1);
     assert!(sent[0].sent.starts_with("つじ田 日本橋八重洲店"));
 
@@ -264,7 +267,8 @@ fn google_is_asked_for_its_own_details_when_openstreetmap_filled_them() {
 }
 
 /// Two branches of one chain, as OpenStreetMap maps them: the same `name`, and the branch apart.
-const STARBUCKS: [(&str, &str, f64, f64); 2] = [("N3612023579", "スターバックス", 35.7506628, 139.8043808), ("W621235316", "スターバックス", 35.6492619, 139.6926277)];
+const STARBUCKS: [(&str, &str, f64, f64); 2] =
+    [("N3612023579", "スターバックス", 35.7506628, 139.8043808), ("W621235316", "スターバックス", 35.6492619, 139.6926277)];
 
 /// A Nominatim lookup answering each (osm id, branch).
 fn branches(elements: &[(&str, &str)]) -> String {

@@ -101,9 +101,7 @@ impl Nominatim {
         place.phone = tag(&["phone", "contact:phone", "mobile", "contact:mobile"]).map(first);
         place.website = tag(&["website", "contact:website", "url"]).map(first).filter(|w| w.starts_with("https://") || w.starts_with("http://"));
         // The rules of `opening_hours`, one a line, as OpenStreetMap writes them ("Mo-Fr 09:00-18:00").
-        place.hours = tag(&["opening_hours"])
-            .map(|v| v.split(';').map(str::trim).filter(|r| !r.is_empty()).map(str::to_string).collect())
-            .unwrap_or_default();
+        place.hours = tag(&["opening_hours"]).map(|v| v.split(';').map(str::trim).filter(|r| !r.is_empty()).map(str::to_string).collect()).unwrap_or_default();
         place.wheelchair = tag(&["wheelchair"]).and_then(Wheelchair::of_tag);
     }
 

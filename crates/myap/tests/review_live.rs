@@ -93,10 +93,7 @@ fn plan(core: &mut Core, now: i64) -> myap::Response {
     })
 }
 
-
 const NO_INCIDENTS: &str = r#"{"sourceUpdated":"2026-11-22T00:00:00Z","results":[]}"#;
-
-
 
 use myap_router::{Graph, GraphBuilder};
 use osm::{Element, Node, Tags, Way};

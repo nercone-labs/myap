@@ -175,7 +175,8 @@ fn the_sun_is_up_by_day_and_down_by_night() {
 fn projection_is_the_closest_point() {
     // A bent line, and points around it: the projection is the closest point of the line, as
     // found by sampling every segment finely.
-    let line = Line::new(vec![Coordinate::new(35.0, 139.0), Coordinate::new(35.001, 139.0005), Coordinate::new(35.001, 139.002), Coordinate::new(35.0, 139.003)]);
+    let line =
+        Line::new(vec![Coordinate::new(35.0, 139.0), Coordinate::new(35.001, 139.0005), Coordinate::new(35.001, 139.002), Coordinate::new(35.0, 139.003)]);
     for i in 0..40 {
         let location = Coordinate::new(34.9995 + (i % 8) as f64 * 0.0003, 138.9995 + (i / 8) as f64 * 0.0008);
         let p = line.project(&location, 0.0, f64::INFINITY).unwrap();

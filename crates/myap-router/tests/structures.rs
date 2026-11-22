@@ -15,7 +15,11 @@ fn grid(n: i64) -> Graph {
     let mut elements = Vec::new();
     for r in 0..n {
         for c in 0..n {
-            elements.push(Element::Node(Node { id: id(r, c), coordinate: Coordinate::new(35.0 + r as f64 * 0.001, 139.0 + c as f64 * 0.001), tags: Tags::default() }));
+            elements.push(Element::Node(Node {
+                id: id(r, c),
+                coordinate: Coordinate::new(35.0 + r as f64 * 0.001, 139.0 + c as f64 * 0.001),
+                tags: Tags::default(),
+            }));
         }
     }
     for line in 0..n {
@@ -77,7 +81,13 @@ fn chord_never_exceeds_the_distance_on_the_earth() {
     // The estimate of the search must be a lower bound of every real distance.
     let graph = grid(4);
     let network = Network::new(&graph);
-    let targets = [Coordinate::new(35.0, 139.0), Coordinate::new(35.0015, 139.0025), Coordinate::new(-33.9, 151.2), Coordinate::new(35.003, 139.003), Coordinate::new(89.0, -179.0)];
+    let targets = [
+        Coordinate::new(35.0, 139.0),
+        Coordinate::new(35.0015, 139.0025),
+        Coordinate::new(-33.9, 151.2),
+        Coordinate::new(35.003, 139.003),
+        Coordinate::new(89.0, -179.0),
+    ];
     for node in 0..graph.nodes.len() as u32 {
         let c = graph.node_coordinate(node);
         for t in &targets {

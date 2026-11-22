@@ -156,7 +156,14 @@ impl Router {
 
     /// The legs of the best route between the `snaps` of the waypoints, then those of the
     /// alternatives kept (with two waypoints only).
-    fn paths(&self, search: &mut Search, request: &RouteRequest, snaps: &[Vec<crate::Snap>], excluded: &EdgeSet, strict: bool) -> Result<Vec<Vec<Path>>, RouteError> {
+    fn paths(
+        &self,
+        search: &mut Search,
+        request: &RouteRequest,
+        snaps: &[Vec<crate::Snap>],
+        excluded: &EdgeSet,
+        strict: bool,
+    ) -> Result<Vec<Vec<Path>>, RouteError> {
         let none = EdgeSet::default();
         let mut legs: Vec<Path> = Vec::with_capacity(snaps.len() - 1);
         for (i, pair) in snaps.windows(2).enumerate() {

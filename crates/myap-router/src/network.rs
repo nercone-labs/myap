@@ -84,11 +84,7 @@ impl Network {
                 EdgeClass { highway: way.highway, flags: way.flags }
             })
             .collect();
-        let points = graph
-            .nodes
-            .iter()
-            .map(|p| Self::point_of(&Graph::coordinate(*p)))
-            .collect();
+        let points = graph.nodes.iter().map(|p| Self::point_of(&Graph::coordinate(*p))).collect();
         Network { bearings, classes, points, climbs, times: [Vec::new(), Vec::new(), Vec::new()], max_speed: [0.0; 3] }
     }
 

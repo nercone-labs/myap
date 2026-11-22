@@ -53,7 +53,15 @@ impl Core {
         }
     }
 
-    pub(super) fn plan(&mut self, origin: Endpoint, destination: Endpoint, stops: Vec<Endpoint>, mode: TravelMode, avoid: routing::Avoid, choice: RouterChoice) {
+    pub(super) fn plan(
+        &mut self,
+        origin: Endpoint,
+        destination: Endpoint,
+        stops: Vec<Endpoint>,
+        mode: TravelMode,
+        avoid: routing::Avoid,
+        choice: RouterChoice,
+    ) {
         self.settings.routing.mode = mode;
         self.settings.routing.avoid = avoid;
         self.save_settings();

@@ -515,7 +515,10 @@ fn guidance_ends_by_itself_after_arriving() {
     let route = overlay["features"].as_array().unwrap().iter().find(|f| f["properties"]["kind"] == "route").unwrap().clone();
     let points: Vec<Coordinate> =
         route["geometry"]["coordinates"].as_array().unwrap().iter().map(|c| Coordinate::new(c[1].as_f64().unwrap(), c[0].as_f64().unwrap())).collect();
-    let at = |c: Coordinate, t: i64| Input::Located { now: t, location: Location { coordinate: c, accuracy_m: Some(5.0), bearing: None, speed_mps: Some(1.3), time_ms: t } };
+    let at = |c: Coordinate, t: i64| Input::Located {
+        now: t,
+        location: Location { coordinate: c, accuracy_m: Some(5.0), bearing: None, speed_mps: Some(1.3), time_ms: t },
+    };
     core.handle(at(points[0], T0 + 2));
     core.handle(Input::StartNavigation { now: T0 + 3 });
     let mut t = T0 + 4;

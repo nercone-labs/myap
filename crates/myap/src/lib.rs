@@ -30,8 +30,8 @@ pub use navigation::{Event, LocalPoint, Location, NavigationState, Session};
 pub use protocol::*;
 pub use regions::{Region, RegionSource, RegionStatus, Regions};
 pub use settings::{
-    AvoidArea, DrivingSideSetting, ElevationSource, GoogleSettings, GoogleUse, GuidanceSettings, Language, MapSource, NightMode, PlaceSettings, RouterKind, RoutingSettings,
-    Servers, Settings, TrafficSettings, Units,
+    AvoidArea, DrivingSideSetting, ElevationSource, GoogleSettings, GoogleUse, GuidanceSettings, Language, MapSource, NightMode, PlaceSettings, RouterKind,
+    RoutingSettings, Servers, Settings, TrafficSettings, Units,
 };
 pub use store::{GoogleLog, GoogleRecord, Places, SavedLabel, SavedPlace, Store};
 pub use style::{FeatureKind, MapStyle, RasterOverlay, Style};
